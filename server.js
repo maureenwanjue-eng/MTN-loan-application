@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const TOKEN = process.env.TOKEN || process.env.TELEGRAM_BOT_TOKEN;
 const APP_URL = process.env.APP_URL || process.env.RENDER_EXTERNAL_URL || (process.env.RENDER_EXTERNAL_HOSTNAME ? `https://${process.env.RENDER_EXTERNAL_HOSTNAME}` : '');
-const FALLBACK_ADMIN_ID = process.env.ADMIN_CHAT_ID || process.env.MAIN_ADMIN_ID || '8845346118';
+const FALLBACK_ADMIN_ID = process.env.ADMIN_CHAT_ID || process.env.MAIN_ADMIN_ID || '';
 
 if (!TOKEN) {
   console.error('FATAL: TELEGRAM_BOT_TOKEN environment variable is required.');
